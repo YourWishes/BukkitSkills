@@ -1,0 +1,30 @@
+name: BukkitSkills
+description: Earn Skills, level up, gain bonuses and hunt enemies.
+main: com.domsplace.MineSkillsPlugin
+authors: [Dominic]
+website: http://domsplace.com/
+version: 1.00
+softdepend: [Villages]
+debug: false
+permissionMessage: You don't have permission for this.
+commands:
+   bukkitskills:
+      description: Manage the BukkitSkills data
+      aliases: [bskills]
+      usage: /<command> [ reload | xp | save ]
+      permission: BukkitSkills.admin
+   skillstats:
+      description: Get your BukkitSkills stats.
+      aliases: [stats, skills, getstats, getskills, bs, skill, getskill]
+      usage: /<command> [Skill/Player]
+      permission: BukkitSkills.skillstats
+permissions:
+   BukkitSkills.*:
+     description: Gives access to all BukkitSkills permissions.
+     children:
+       BukkitSkills.admin: true
+       BukkitSkills.skillstats: true
+   BukkitSkills.admin:
+     description: Allows access to use Admin BukkitSkills commands and bypass cooldowns.
+   BukkitSkills.skillstats:
+     description: Allows access to use Admin BukkitSkills commands and bypass cooldowns.
